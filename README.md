@@ -298,41 +298,6 @@ Purchase Report
 Inventory Report
 ```
 
----
-
-# Screenshots
-
-The following screenshots are included in the repository.
-
-- Login
-- Register
-- Dashboard
-- Company
-- Ledger
-- Inventory
-- Purchase
-- Sales
-- Reports
-- Invoice PDF
-
----
-
-# Live Demo
-
-Frontend
-
-```
-https://YOUR-VERCEL-LINK.vercel.app
-```
-
-Backend
-
-```
-https://YOUR-RENDER-LINK.onrender.com
-```
-
----
-
 # Future Scope
 
 - Barcode Support
@@ -344,7 +309,7 @@ https://YOUR-RENDER-LINK.onrender.com
 - Role Based Access
 - Backup & Restore
 
----
+
 
 # Author
 
@@ -358,6 +323,6 @@ LinkedIn
 
 https://www.linkedin.com/in/animesh-mishra
 
----
+
 
 If you have any suggestions or feedback regarding the project, feel free to open an issue or connect with me.
