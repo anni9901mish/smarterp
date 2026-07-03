@@ -27,24 +27,25 @@ const links = [
 const Sidebar = ({ open, onClose }) => {
   return (
     <aside
-      className={`fixed left-0 top-0 z-40 flex h-screen w-72 flex-col border-r border-white/10 bg-[#111827] transition-transform duration-300 lg:translate-x-0 ${
+      className={`fixed left-0 top-0 z-40 flex h-screen w-72 flex-col border-r border-violet-500/10 bg-gradient-to-b from-[#111633] via-[#0b1023] to-[#060914] transition-transform duration-300 lg:translate-x-0 ${
         open ? "translate-x-0" : "-translate-x-full"
       }`}
     >
       <div className="p-5">
-        <div className="flex items-center justify-between rounded-3xl border border-white/10 bg-white/5 p-4">
+        <div className="flex items-center justify-between rounded-3xl border border-violet-500/10 bg-gradient-to-r from-violet-500/10 to-cyan-500/10 p-4 shadow-2xl shadow-black/30">
           <div>
             <h2 className="text-2xl font-bold">
-              Smart<span className="text-emerald-400">ERP</span>
+              Smart
+              <span className="bg-gradient-to-r from-violet-400 to-cyan-400 bg-clip-text text-transparent">
+                ERP
+              </span>
             </h2>
-            <p className="mt-1 text-sm text-slate-400">
-              Tally-inspired ERP
-            </p>
+            <p className="mt-1 text-sm text-slate-400">Tally-inspired ERP</p>
           </div>
 
           <button
             onClick={onClose}
-            className="rounded-xl bg-white/10 p-2 lg:hidden"
+            className="rounded-xl bg-violet-500/10 p-2 text-violet-300 lg:hidden"
           >
             <X size={18} />
           </button>
@@ -63,8 +64,8 @@ const Sidebar = ({ open, onClose }) => {
               className={({ isActive }) =>
                 `flex items-center gap-3 rounded-2xl px-4 py-3 text-sm transition ${
                   isActive
-                    ? "bg-emerald-500 font-semibold text-slate-950"
-                    : "text-slate-300 hover:bg-white/10 hover:text-white"
+                    ? "bg-gradient-to-r from-violet-500 to-cyan-500 font-semibold text-white shadow-lg shadow-violet-500/30"
+                    : "text-slate-300 hover:bg-violet-500/10 hover:text-white"
                 }`
               }
             >

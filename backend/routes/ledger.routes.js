@@ -9,19 +9,27 @@ const {
   deleteLedger,
   getCustomers,
   getSuppliers,
+  getLedgerStatement,
 } = require("../controllers/ledger.controller");
 
 const router = express.Router();
 
+
 router.post("/", authMiddleware, createLedger);
+
 
 router.get("/", authMiddleware, getLedgers);
 
-router.get("/customers", authMiddleware, getCustomers);
 
+router.get("/customers", authMiddleware, getCustomers);
 router.get("/suppliers", authMiddleware, getSuppliers);
 
+
+router.get("/:id/statement", authMiddleware, getLedgerStatement);
+
+
 router.put("/:id", authMiddleware, updateLedger);
+
 
 router.delete("/:id", authMiddleware, deleteLedger);
 

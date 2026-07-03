@@ -198,7 +198,7 @@ const generatePDF = (print = false) => {
         <div className="flex gap-3">
           <button
             onClick={() => generatePDF(true)}
-            className="flex items-center gap-2 rounded-2xl bg-emerald-500 px-5 py-3 font-semibold text-slate-950"
+            className="flex items-center gap-2 rounded-2xl bg-violet-500 px-5 py-3 font-semibold text-slate-950"
           >
             <Printer size={18} />
             Print

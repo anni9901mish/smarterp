@@ -53,7 +53,7 @@ const PurchaseHistory = () => {
   return (
     <div className="space-y-6">
       <div className="flex items-center gap-3">
-        <div className="rounded-2xl bg-emerald-500/15 p-3 text-emerald-400">
+        <div className="rounded-2xl bg-violet-500/15 p-3 text-violet-400">
           <History size={28} />
         </div>
 
@@ -64,7 +64,7 @@ const PurchaseHistory = () => {
       </div>
 
       <div className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-4 py-3">
-        <Search size={18} className="text-emerald-400" />
+        <Search size={18} className="text-violet-400" />
         <input
           placeholder="Search by invoice or supplier..."
           className="w-full bg-transparent outline-none placeholder:text-slate-500"
@@ -95,7 +95,7 @@ const PurchaseHistory = () => {
                 key={voucher.id}
                 className="grid grid-cols-5 items-center border-b border-white/10 px-5 py-4 text-sm transition hover:bg-white/5"
               >
-                <span className="font-semibold text-emerald-400">{voucher.invoiceNo}</span>
+                <span className="font-semibold text-violet-400">{voucher.invoiceNo}</span>
                 <span className="truncate">{voucher.ledger?.name || "Unknown Supplier"}</span>
                 <span className="text-slate-400">
                   {new Date(voucher.createdAt || voucher.date).toLocaleDateString("en-GB")}

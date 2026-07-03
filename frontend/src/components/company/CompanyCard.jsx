@@ -7,15 +7,15 @@ const CompanyCard = ({ company, activeCompanyId, onOpen }) => {
   return (
     <motion.div
       whileHover={{ y: -6, scale: 1.01 }}
-      className="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-xl transition hover:border-emerald-400/50 hover:bg-white/10"
+      className="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-xl transition hover:border-violet-400/50 hover:bg-white/10"
     >
       <div className="flex items-start justify-between">
-        <div className="rounded-2xl bg-emerald-500/15 p-3 text-emerald-400">
+        <div className="rounded-2xl bg-violet-500/15 p-3 text-violet-400">
           <Building2 size={28} />
         </div>
 
         {isActive && (
-          <span className="flex items-center gap-1 rounded-full bg-emerald-500/15 px-3 py-1 text-xs text-emerald-400">
+          <span className="flex items-center gap-1 rounded-full bg-violet-500/15 px-3 py-1 text-xs text-violet-400">
             <CheckCircle2 size={14} />
             Active
           </span>
@@ -30,7 +30,7 @@ const CompanyCard = ({ company, activeCompanyId, onOpen }) => {
 
       <button
         onClick={() => onOpen(company)}
-        className="mt-6 flex w-full items-center justify-center gap-2 rounded-2xl bg-emerald-500 px-4 py-3 font-semibold text-slate-950 transition hover:bg-emerald-400"
+        className="mt-6 flex w-full items-center justify-center gap-2 rounded-2xl bg-violet-500 px-4 py-3 font-semibold text-slate-950 transition hover:bg-violet-400"
       >
         Open Company <ArrowRight size={18} />
       </button>

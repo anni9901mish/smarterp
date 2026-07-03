@@ -128,7 +128,7 @@ const Sales = () => {
   return (
     <div className="space-y-6">
       <div className="flex items-center gap-3">
-        <div className="rounded-2xl bg-emerald-500/15 p-3 text-emerald-400">
+        <div className="rounded-2xl bg-violet-500/15 p-3 text-violet-400">
           <Receipt size={28} />
         </div>
 
@@ -146,7 +146,7 @@ const Sales = () => {
         </label>
 
         <select
-          className="w-full rounded-2xl border border-white/10 bg-slate-900 px-4 py-3 outline-none focus:border-emerald-400"
+          className="w-full rounded-2xl border border-white/10 bg-slate-900 px-4 py-3 outline-none focus:border-violet-400"
           value={ledgerId}
           onChange={(e) => setLedgerId(e.target.value)}
         >
@@ -185,7 +185,7 @@ const Sales = () => {
       <button
         onClick={handleSave}
         disabled={loading}
-        className="w-full rounded-2xl bg-emerald-500 py-4 text-lg font-bold text-slate-950 hover:bg-emerald-400 disabled:opacity-60"
+        className="w-full rounded-2xl bg-violet-500 py-4 text-lg font-bold text-slate-950 hover:bg-violet-400 disabled:opacity-60"
       >
         {loading ? "Saving Sales..." : "Save Sales Voucher"}
       </button>

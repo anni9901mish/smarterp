@@ -7,7 +7,7 @@ const PurchaseItemRow = ({ row, index, items, onChange, onRemove }) => {
     (1 + Number(row.gstPercent || 0) / 100);
 
   const input =
-    "w-full rounded-xl border border-white/10 bg-slate-900 px-3 py-2 outline-none focus:border-emerald-400";
+    "w-full rounded-xl border border-white/10 bg-slate-900 px-3 py-2 outline-none focus:border-violet-400";
 
   return (
     <div className="grid gap-3 rounded-2xl border border-white/10 bg-white/5 p-4 md:grid-cols-6">
@@ -49,7 +49,7 @@ const PurchaseItemRow = ({ row, index, items, onChange, onRemove }) => {
       />
 
       <div className="flex items-center justify-between gap-2">
-        <p className="font-semibold text-emerald-400">
+        <p className="font-semibold text-violet-400">
           ₹{amount.toLocaleString()}
         </p>
 

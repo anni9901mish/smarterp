@@ -14,6 +14,8 @@ import PurchaseHistory from "./pages/PurchaseHistory";
 import SalesHistory from "./pages/SalesHistory";
 import VoucherDetails from "./pages/VoucherDetails";
 import Reports from "./pages/Reports";
+import LedgerStatement from "./pages/LedgerStatement";
+import StockLedger from "./pages/StockLedger";
 
 
 function App() {
@@ -43,7 +45,8 @@ function App() {
           <Route path="sales-history" element={<SalesHistory />} />
           <Route path="voucher/:id" element={<VoucherDetails />} />
           <Route path="reports" element={<Reports />} />
-          
+          <Route path="ledger/:id/statement" element={<LedgerStatement />} />
+          <Route path="items/:id/stock-ledger" element={<StockLedger />} />
         </Route>
       </Routes>
     </BrowserRouter>

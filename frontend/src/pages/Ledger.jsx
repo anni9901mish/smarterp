@@ -129,7 +129,7 @@ const Ledger = () => {
     <div className="space-y-6">
       <div className="flex flex-col justify-between gap-4 md:flex-row md:items-center">
         <div className="flex items-center gap-3">
-          <div className="rounded-2xl bg-emerald-500/15 p-3 text-emerald-400">
+          <div className="rounded-2xl bg-violet-500/15 p-3 text-violet-400">
             <Users size={28} />
           </div>
 
@@ -143,7 +143,7 @@ const Ledger = () => {
 
         <button
           onClick={openCreateModal}
-          className="flex items-center gap-2 rounded-2xl bg-emerald-500 px-5 py-3 font-semibold text-slate-950 transition hover:bg-emerald-400"
+          className="flex items-center gap-2 rounded-2xl bg-violet-500 px-5 py-3 font-semibold text-slate-950 transition hover:bg-violet-400"
         >
           <Plus size={18} />
           Add Ledger
@@ -153,7 +153,7 @@ const Ledger = () => {
       <LedgerStats ledgers={ledgers} />
 
       <div className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-4 py-3">
-        <Search size={18} className="text-emerald-400" />
+        <Search size={18} className="text-violet-400" />
 
         <input
           placeholder="Search customer or supplier..."

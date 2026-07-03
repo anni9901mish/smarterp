@@ -1,6 +1,6 @@
 const LedgerForm = ({ form, setForm, onSubmit, loading, editMode }) => {
   const input =
-    "w-full rounded-xl border border-white/10 bg-slate-900 px-4 py-3 outline-none focus:border-emerald-400";
+    "w-full rounded-xl border border-white/10 bg-slate-900 px-4 py-3 outline-none focus:border-violet-400";
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -74,7 +74,7 @@ const LedgerForm = ({ form, setForm, onSubmit, loading, editMode }) => {
 
       <button
         disabled={loading}
-        className="w-full rounded-xl bg-emerald-500 py-3 font-semibold text-slate-950 hover:bg-emerald-400 disabled:opacity-60"
+        className="w-full rounded-xl bg-violet-500 py-3 font-semibold text-slate-950 hover:bg-violet-400 disabled:opacity-60"
       >
         {loading ? "Saving..." : editMode ? "Update Ledger" : "Create Ledger"}
       </button>

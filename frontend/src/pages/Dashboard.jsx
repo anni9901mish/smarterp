@@ -43,9 +43,9 @@ const getStatusStyle = (status) => {
   }
 
   return {
-    border: "border-l-emerald-500",
-    badge: "bg-emerald-500/15 text-emerald-400",
-    bar: "bg-emerald-500",
+    border: "border-l-violet-500",
+    badge: "bg-violet-500/15 text-violet-400",
+    bar: "bg-violet-500",
     icon: CircleCheckBig,
   };
 };
@@ -155,7 +155,7 @@ const Dashboard = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1 }}
-              className="min-w-0 rounded-3xl border border-white/10 bg-white/5 p-5 shadow-xl transition hover:-translate-y-1 hover:border-emerald-400/50 hover:bg-white/10"
+              className="min-w-0 rounded-3xl border border-white/10 bg-white/5 p-5 shadow-xl transition hover:-translate-y-1 hover:border-violet-400/50 hover:bg-white/10"
             >
               <div className="flex items-start justify-between gap-4">
                 <div className="min-w-0 flex-1">
@@ -171,12 +171,12 @@ const Dashboard = () => {
                   </p>
                 </div>
 
-                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-emerald-500/15 text-emerald-400">
+                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-violet-500/15 text-violet-400">
                   <Icon size={24} />
                 </div>
               </div>
 
-              <span className="mt-4 inline-block rounded-full bg-emerald-500/10 px-3 py-1 text-xs text-emerald-400">
+              <span className="mt-4 inline-block rounded-full bg-violet-500/10 px-3 py-1 text-xs text-violet-400">
                 {item.change}
               </span>
             </motion.div>
@@ -239,7 +239,7 @@ const Dashboard = () => {
                 onClick={() => setChartType(type)}
                 className={`rounded-xl px-4 py-2 text-sm font-semibold transition ${
                   chartType === type
-                    ? "bg-emerald-500 text-slate-950"
+                    ? "bg-violet-500 text-slate-950"
                     : "bg-white/10 text-slate-300 hover:bg-white/20"
                 }`}
               >
@@ -251,7 +251,7 @@ const Dashboard = () => {
           <div className="mt-6 h-72">
             {dashboard.salesChart.length <= 1 ? (
               <div className="flex h-full flex-col items-center justify-center rounded-3xl border border-dashed border-white/10 bg-slate-950/40 text-center">
-                <div className="mb-4 rounded-2xl bg-emerald-500/15 p-4 text-emerald-400">
+                <div className="mb-4 rounded-2xl bg-violet-500/15 p-4 text-violet-400">
                   <IndianRupee size={34} />
                 </div>
 
@@ -262,7 +262,7 @@ const Dashboard = () => {
                   proper analytics graph.
                 </p>
 
-                <div className="mt-5 rounded-full bg-emerald-500/10 px-4 py-2 text-sm font-semibold text-emerald-400">
+                <div className="mt-5 rounded-full bg-violet-500/10 px-4 py-2 text-sm font-semibold text-violet-400">
                   Current Sales: ₹
                   {Number(dashboard.sales || 0).toLocaleString("en-IN")}
                 </div>
@@ -365,7 +365,7 @@ const Dashboard = () => {
               </p>
             </div>
 
-            <span className="shrink-0 rounded-full bg-emerald-500/10 px-3 py-1 text-xs font-semibold text-emerald-400">
+            <span className="shrink-0 rounded-full bg-violet-500/10 px-3 py-1 text-xs font-semibold text-violet-400">
               {dashboard.inventory.length} Items
             </span>
           </div>

@@ -27,10 +27,10 @@ const Navbar = () => {
   };
 
   return (
-    <header className="sticky top-0 z-10 hidden border-b border-white/10 bg-[#0B1220]/90 px-6 py-4 backdrop-blur lg:block">
+    <header className="sticky top-0 z-10 hidden border-b border-violet-500/10 bg-[#0B1020]/60 px-6 py-4 backdrop-blur-2xl lg:block">
       <div className="flex items-center justify-between gap-4">
-        <div className="flex min-w-0 items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-4 py-3">
-          <Building2 size={18} className="shrink-0 text-emerald-400" />
+        <div className="flex min-w-0 items-center gap-3 rounded-2xl border border-violet-500/10 bg-gradient-to-r from-violet-500/10 to-cyan-500/10 px-4 py-3 shadow-2xl shadow-black/20">
+          <Building2 size={18} className="shrink-0 text-cyan-400" />
 
           <div className="min-w-0">
             <p className="text-xs text-slate-400">Active Company</p>
@@ -44,8 +44,8 @@ const Navbar = () => {
         </div>
 
         <div className="flex items-center gap-3">
-          <div className="hidden items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-4 py-3 md:flex">
-            <UserCircle size={20} className="text-slate-400" />
+          <div className="hidden items-center gap-3 rounded-2xl border border-violet-500/10 bg-gradient-to-r from-[#141b3a] to-[#1b2148] px-4 py-3 shadow-2xl shadow-black/20 md:flex">
+            <UserCircle size={20} className="text-cyan-400" />
             <div>
               <p className="text-xs text-slate-400">Logged in as</p>
               <p className="text-sm font-semibold">
@@ -56,7 +56,7 @@ const Navbar = () => {
 
           <button
             onClick={handleLogout}
-            className="flex items-center gap-2 rounded-2xl bg-red-500/10 px-4 py-3 text-sm font-semibold text-red-400 hover:bg-red-500/20"
+            className="flex items-center gap-2 rounded-2xl border border-rose-500/20 bg-gradient-to-r from-rose-500/20 to-red-500/20 px-4 py-3 text-sm font-semibold text-rose-300 hover:from-rose-500/30 hover:to-red-500/30"
           >
             <LogOut size={17} />
             Logout

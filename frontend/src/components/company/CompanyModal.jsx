@@ -6,7 +6,7 @@ const CompanyModal = ({ open, onClose, form, setForm, onSubmit, loading }) => {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 px-4 backdrop-blur-sm">
-      <div className="w-full max-w-lg rounded-3xl border border-white/10 bg-[#111827] p-6 text-white shadow-2xl">
+      <div className="w-full max-w-lg rounded-3xl border border-white/10 bg-[#0F1025] p-6 text-white shadow-2xl">
         <div className="mb-6 flex items-center justify-between">
           <div>
             <h2 className="text-2xl font-bold">Create Company</h2>

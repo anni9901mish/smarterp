@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 import {
   User,
   Truck,
@@ -7,6 +8,7 @@ import {
   BadgeIndianRupee,
   Pencil,
   Trash2,
+  FileText,
 } from "lucide-react";
 
 const formatMoney = (value) =>
@@ -15,20 +17,22 @@ const formatMoney = (value) =>
   })}`;
 
 const LedgerCard = ({ ledger, onEdit, onDelete }) => {
+  const navigate = useNavigate();
+
   const isCustomer = ledger.type === "CUSTOMER";
   const Icon = isCustomer ? User : Truck;
 
   return (
     <motion.div
       whileHover={{ y: -4, scale: 1.01 }}
-      className="flex h-full min-w-0 flex-col rounded-3xl border border-white/10 bg-white/5 p-5 shadow-xl transition hover:border-emerald-400/40 hover:bg-white/10"
+      className="flex h-full min-w-0 flex-col rounded-3xl border border-white/10 bg-white/5 p-5 shadow-xl transition hover:border-violet-400/40 hover:bg-white/10"
     >
       <div className="flex items-start justify-between gap-4">
         <div className="flex min-w-0 flex-1 gap-3">
           <div
             className={`flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl ${
               isCustomer
-                ? "bg-emerald-500/15 text-emerald-400"
+                ? "bg-violet-500/15 text-violet-400"
                 : "bg-amber-500/15 text-amber-400"
             }`}
           >
@@ -43,7 +47,7 @@ const LedgerCard = ({ ledger, onEdit, onDelete }) => {
             <span
               className={`mt-2 inline-flex rounded-full px-3 py-1 text-xs font-medium ${
                 isCustomer
-                  ? "bg-emerald-500/15 text-emerald-400"
+                  ? "bg-violet-500/15 text-violet-400"
                   : "bg-amber-500/15 text-amber-400"
               }`}
             >
@@ -56,9 +60,10 @@ const LedgerCard = ({ ledger, onEdit, onDelete }) => {
           <p className="text-xs text-slate-400">
             {isCustomer ? "Receivable" : "Payable"}
           </p>
+
           <p
             title={formatMoney(ledger.currentBalance)}
-            className="mt-1 max-w-[120px] truncate text-lg font-bold text-emerald-400 xl:text-xl"
+            className="mt-1 max-w-[120px] truncate text-lg font-bold text-violet-400 xl:text-xl"
           >
             {formatMoney(ledger.currentBalance)}
           </p>
@@ -88,10 +93,18 @@ const LedgerCard = ({ ledger, onEdit, onDelete }) => {
         </p>
       </div>
 
-      <div className="mt-auto flex gap-3 pt-5">
+      <div className="mt-auto grid grid-cols-3 gap-2 pt-5">
+        <button
+          onClick={() => navigate(`/ledger/${ledger.id}/statement`)}
+          className="flex items-center justify-center gap-2 rounded-xl border border-violet-500/20 bg-violet-500/10 py-2.5 text-sm text-violet-300 hover:bg-violet-500/20"
+        >
+          <FileText size={15} />
+          <span className="hidden xl:inline">Statement</span>
+        </button>
+
         <button
           onClick={() => onEdit(ledger)}
-          className="flex flex-1 items-center justify-center gap-2 rounded-xl border border-white/10 bg-white/5 py-2.5 text-sm hover:bg-white/10"
+          className="flex items-center justify-center gap-2 rounded-xl border border-white/10 bg-white/5 py-2.5 text-sm hover:bg-white/10"
         >
           <Pencil size={15} />
           Edit
@@ -99,7 +112,7 @@ const LedgerCard = ({ ledger, onEdit, onDelete }) => {
 
         <button
           onClick={() => onDelete(ledger.id)}
-          className="flex flex-1 items-center justify-center gap-2 rounded-xl border border-red-500/20 bg-red-500/10 py-2.5 text-sm text-red-400 hover:bg-red-500/20"
+          className="flex items-center justify-center gap-2 rounded-xl border border-red-500/20 bg-red-500/10 py-2.5 text-sm text-red-400 hover:bg-red-500/20"
         >
           <Trash2 size={15} />
           Delete

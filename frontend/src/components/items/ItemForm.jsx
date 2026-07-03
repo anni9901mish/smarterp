@@ -12,14 +12,14 @@ const Field = ({ label, helper, children, required }) => (
 
 const SectionTitle = ({ icon: Icon, title }) => (
   <div className="flex items-center gap-2 border-b border-white/10 pb-2">
-    <Icon size={18} className="text-emerald-400" />
+    <Icon size={18} className="text-violet-400" />
     <h3 className="font-semibold">{title}</h3>
   </div>
 );
 
 const ItemForm = ({ form, setForm, onSubmit, loading, editMode }) => {
   const input =
-    "w-full rounded-xl border border-white/10 bg-slate-900 px-4 py-3 outline-none placeholder:text-slate-600 focus:border-emerald-400";
+    "w-full rounded-xl border border-white/10 bg-slate-900 px-4 py-3 outline-none placeholder:text-slate-600 focus:border-violet-400";
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -173,7 +173,7 @@ const ItemForm = ({ form, setForm, onSubmit, loading, editMode }) => {
 
       <button
         disabled={loading}
-        className="w-full rounded-xl bg-emerald-500 py-3 font-semibold text-slate-950 hover:bg-emerald-400 disabled:opacity-60"
+        className="w-full rounded-xl bg-violet-500 py-3 font-semibold text-slate-950 hover:bg-violet-400 disabled:opacity-60"
       >
         {loading ? "Saving..." : editMode ? "Update Item" : "Create Item"}
       </button>

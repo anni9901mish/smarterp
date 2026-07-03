@@ -35,8 +35,8 @@ const ItemStats = ({ items }) => {
       title: "Total Stock",
       value: totalStock.toLocaleString("en-IN"),
       icon: Boxes,
-      color: "text-emerald-400",
-      bg: "bg-emerald-500/15",
+      color: "text-violet-400",
+      bg: "bg-violet-500/15",
     },
     {
       title: "Low Stock",

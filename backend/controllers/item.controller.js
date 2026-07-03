@@ -119,3 +119,69 @@ exports.deleteItem = async (req, res) => {
     });
   }
 };
+exports.getStockLedger = async (req, res) => {
+  try {
+    const { id } = req.params;
+
+    const item = await prisma.item.findUnique({
+      where: { id: Number(id) },
+      include: {
+        voucherItems: {
+          include: {
+            voucher: {
+              include: {
+                ledger: true,
+              },
+            },
+          },
+          orderBy: {
+            id: "asc",
+          },
+        },
+      },
+    });
+
+    if (!item) {
+      return res.status(404).json({ message: "Item not found" });
+    }
+
+    let runningStock = 0;
+
+    const movements = item.voucherItems.map((row) => {
+      const voucher = row.voucher;
+      const qty = Number(row.quantity || 0);
+
+      const inQty = voucher.type === "PURCHASE" ? qty : 0;
+      const outQty = voucher.type === "SALES" ? qty : 0;
+
+      runningStock = runningStock + inQty - outQty;
+
+      return {
+        id: row.id,
+        date: voucher.date || voucher.createdAt,
+        invoiceNo: voucher.invoiceNo,
+        voucherType: voucher.type,
+        party: voucher.ledger?.name || "-",
+        inQty,
+        outQty,
+        balance: runningStock,
+        rate: row.rate,
+        amount: row.amount,
+      };
+    });
+
+    res.json({
+      item: {
+        id: item.id,
+        name: item.name,
+        code: item.code,
+        unit: item.unit,
+        currentStock: item.stock,
+        minimumStock: item.minimumStock,
+      },
+      movements,
+    });
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};

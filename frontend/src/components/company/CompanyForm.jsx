@@ -1,6 +1,6 @@
 const CompanyForm = ({ form, setForm, onSubmit, loading }) => {
   const inputClass =
-    "w-full rounded-2xl border border-white/10 bg-slate-950/60 px-4 py-3 text-white outline-none placeholder:text-slate-500 focus:border-emerald-400";
+    "w-full rounded-2xl border border-white/10 bg-slate-950/60 px-4 py-3 text-white outline-none placeholder:text-slate-500 focus:border-violet-400";
 
   return (
     <form onSubmit={onSubmit} className="space-y-4">
@@ -20,7 +20,7 @@ const CompanyForm = ({ form, setForm, onSubmit, loading }) => {
 
       <button
         disabled={loading}
-        className="w-full rounded-2xl bg-emerald-500 py-3 font-semibold text-slate-950 transition hover:bg-emerald-400 disabled:opacity-60"
+        className="w-full rounded-2xl bg-violet-500 py-3 font-semibold text-slate-950 transition hover:bg-violet-400 disabled:opacity-60"
       >
         {loading ? "Creating..." : "Create Company"}
       </button>

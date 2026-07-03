@@ -66,7 +66,7 @@ const Login = () => {
         }`}
       >
         <div className="mb-8 flex items-center gap-3">
-          <div className="rounded-2xl bg-emerald-500/15 p-3 text-emerald-400">
+          <div className="rounded-2xl bg-violet-500/15 p-3 text-violet-400">
             <ShieldCheck size={28} />
           </div>
 
@@ -86,7 +86,7 @@ const Login = () => {
                 : "border-slate-200 bg-slate-50"
             }`}
           >
-            <Mail size={18} className="text-emerald-400" />
+            <Mail size={18} className="text-violet-400" />
             <input
               className="w-full bg-transparent outline-none"
               placeholder="Email address"
@@ -103,7 +103,7 @@ const Login = () => {
                 : "border-slate-200 bg-slate-50"
             }`}
           >
-            <Lock size={18} className="text-emerald-400" />
+            <Lock size={18} className="text-violet-400" />
             <input
               className="w-full bg-transparent outline-none"
               placeholder="Password"
@@ -115,7 +115,7 @@ const Login = () => {
 
           <button
             disabled={loading}
-            className="w-full rounded-2xl bg-emerald-500 py-3 font-semibold text-slate-950 hover:bg-emerald-400 disabled:opacity-60"
+            className="w-full rounded-2xl bg-violet-500 py-3 font-semibold text-slate-950 hover:bg-violet-400 disabled:opacity-60"
           >
             {loading ? "Logging in..." : "Login"}
           </button>
@@ -129,7 +129,7 @@ const Login = () => {
           }
         >
           New user?{" "}
-          <Link to="/register" className="font-medium text-emerald-400">
+          <Link to="/register" className="font-medium text-violet-400">
             Create account
           </Link>
         </p>

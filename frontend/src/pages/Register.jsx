@@ -40,7 +40,7 @@ const Register = () => {
     <div className="flex min-h-screen items-center justify-center bg-[#0f172a] px-4 text-white">
       <div className="w-full max-w-md rounded-3xl border border-white/10 bg-white/10 p-8 shadow-2xl backdrop-blur-xl">
         <div className="mb-8 flex items-center gap-3">
-          <div className="rounded-2xl bg-emerald-500/15 p-3 text-emerald-400">
+          <div className="rounded-2xl bg-violet-500/15 p-3 text-violet-400">
             <ShieldCheck size={28} />
           </div>
 
@@ -52,7 +52,7 @@ const Register = () => {
 
         <form onSubmit={handleRegister} className="space-y-4">
           <div className="flex items-center gap-3 rounded-2xl border border-white/10 bg-slate-950/60 px-4 py-3">
-            <User size={18} className="text-emerald-400" />
+            <User size={18} className="text-violet-400" />
             <input
               className="w-full bg-transparent outline-none"
               placeholder="Full name"
@@ -62,7 +62,7 @@ const Register = () => {
           </div>
 
           <div className="flex items-center gap-3 rounded-2xl border border-white/10 bg-slate-950/60 px-4 py-3">
-            <Mail size={18} className="text-emerald-400" />
+            <Mail size={18} className="text-violet-400" />
             <input
               className="w-full bg-transparent outline-none"
               placeholder="Email address"
@@ -73,7 +73,7 @@ const Register = () => {
           </div>
 
           <div className="flex items-center gap-3 rounded-2xl border border-white/10 bg-slate-950/60 px-4 py-3">
-            <Lock size={18} className="text-emerald-400" />
+            <Lock size={18} className="text-violet-400" />
             <input
               className="w-full bg-transparent outline-none"
               placeholder="Password"
@@ -85,7 +85,7 @@ const Register = () => {
 
           <button
             disabled={loading}
-            className="w-full rounded-2xl bg-emerald-500 py-3 font-semibold text-slate-950 hover:bg-emerald-400 disabled:opacity-60"
+            className="w-full rounded-2xl bg-violet-500 py-3 font-semibold text-slate-950 hover:bg-violet-400 disabled:opacity-60"
           >
             {loading ? "Creating..." : "Create Account"}
           </button>
@@ -93,7 +93,7 @@ const Register = () => {
 
         <p className="mt-6 text-sm text-slate-400">
           Already have an account?{" "}
-          <Link to="/login" className="font-medium text-emerald-400">
+          <Link to="/login" className="font-medium text-violet-400">
             Login
           </Link>
         </p>

@@ -27,7 +27,7 @@ const PurchaseSummary = ({ rows }) => {
         </div>
 
         <div className="border-t border-white/10 pt-4">
-          <div className="flex justify-between text-xl font-bold text-emerald-400">
+          <div className="flex justify-between text-xl font-bold text-violet-400">
             <span>Total</span>
             <span>₹{total.toLocaleString()}</span>
           </div>

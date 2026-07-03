@@ -165,12 +165,12 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(16, 185, 129, 0.6);
+  background: linear-gradient(180deg, #8b5cf6, #22d3ee);
   border-radius: 999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(16, 185, 129, 0.9);
+  background: linear-gradient(180deg, #a78bfa, #67e8f9);
 }
 
 html {

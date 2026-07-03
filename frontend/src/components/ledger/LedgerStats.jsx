@@ -21,7 +21,7 @@ const LedgerStats = ({ ledgers }) => {
   );
 
   const stats = [
-    { title: "Customers", value: customers.length, icon: Users, color: "text-emerald-400" },
+    { title: "Customers", value: customers.length, icon: Users, color: "text-violet-400" },
     { title: "Suppliers", value: suppliers.length, icon: Truck, color: "text-amber-400" },
     { title: "Receivable", value: formatMoney(receivable), icon: IndianRupee, color: "text-cyan-400" },
     { title: "Payable", value: formatMoney(payable), icon: Wallet, color: "text-rose-400" },
@@ -38,7 +38,7 @@ const LedgerStats = ({ ledgers }) => {
             initial={{ opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.08 }}
-            className="min-w-0 rounded-3xl border border-white/10 bg-white/5 p-5 shadow-xl transition hover:-translate-y-1 hover:border-emerald-400/40 hover:bg-white/10"
+            className="min-w-0 rounded-3xl border border-white/10 bg-white/5 p-5 shadow-xl transition hover:-translate-y-1 hover:border-violet-400/40 hover:bg-white/10"
           >
             <div className="flex items-start justify-between gap-4 overflow-hidden">
               <div className="min-w-0 flex-1">

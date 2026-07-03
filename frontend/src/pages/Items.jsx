@@ -137,7 +137,7 @@ const Items = () => {
 
         <button
           onClick={openCreateModal}
-          className="flex items-center gap-2 rounded-2xl bg-emerald-500 px-5 py-3 font-semibold text-slate-950 hover:bg-emerald-400"
+          className="flex items-center gap-2 rounded-2xl bg-violet-500 px-5 py-3 font-semibold text-slate-950 hover:bg-violet-400"
         >
           <Plus size={18} />
           Add Item
@@ -147,7 +147,7 @@ const Items = () => {
       <ItemStats items={items} />
 
       <div className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-4 py-3">
-        <Search size={18} className="text-emerald-400" />
+        <Search size={18} className="text-violet-400" />
         <input
           placeholder="Search item..."
           className="w-full bg-transparent outline-none placeholder:text-slate-500"
